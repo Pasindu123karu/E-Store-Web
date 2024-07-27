@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Widget</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the body take up the full viewport height */
+            margin: 0; /* Remove default margin to center precisely */
+        }
+        /* Style for the grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 450px); /* Two columns with a fixed width of 450px */
+            gap: 20px; /* Gap between grid items */
+        }
+
+        /* Style for the widget container */
+        .widget {
+            background-color: rgb(22, 25, 61);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 450px; /* Set the width to the actual size */
+            height: 300px; /* Set the height to the actual size */
+            padding: 1px;
+            text-align: right; /* Align the content to the right */
+            position: relative;/* Required for absolute positioning of the image */
+            transition: all .40s;
+        }
+       
+
+        /* Style for the image */
+        .widget img {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all .40s;
+        }
+
+        .widget img:hover {
+            transform: scale(1.2);
+        }
+        .name{
+            color: aliceblue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            
+        
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="widget">
+            <h1 class="name">PHONES</h1>
+            <img src="./3-removebg-preview.png" alt="Small Image">
+        </div>
+
+        <div class="widget">
+            <img src="./screenshot-2022-09-14-at-020448-removebg-preview.png" alt="Small Image">
+        </div>
+
+        <div class="widget">
+            <img src="./2-removebg-preview.png" alt="Small Image">
+        </div>
+
+        <div class="widget">
+            <img src="./1-removebg-preview.png" alt="Small Image">
+        </div>
+    </div>
+</body>
+</html>
